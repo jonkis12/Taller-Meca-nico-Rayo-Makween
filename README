@@ -1,0 +1,7 @@
+echo "# Taller-Meca-nico-Rayo-Makween" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/jonkis12/Taller-Meca-nico-Rayo-Makween.git
+git push -u origin main
