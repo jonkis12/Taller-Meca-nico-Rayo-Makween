@@ -41,7 +41,7 @@
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Carousel</a>
+        <a class="navbar-brand" href="#">El Rayo</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -119,7 +119,7 @@
                     required
                   />
                   <div class="invalid-feedback">
-                    Valid first name is required.
+                    Nombre necesario.
                   </div>
                 </div>
 
@@ -134,7 +134,7 @@
                     required
                   />
                   <div class="invalid-feedback">
-                    Valid last name is required.
+                    Apellido necesario.
                   </div>
                 </div>
 
@@ -165,7 +165,7 @@
                     placeholder="Descripcion imagen (opcional) ..."
                   />
                   <div class="invalid-feedback">
-                    Please enter a valid email address for shipping updates.
+                    Por favor poner una imagen.
                   </div>
                 </div>
 
@@ -181,9 +181,23 @@
                     required
                   />
                   <div class="invalid-feedback">
-                    Please enter your shipping address.
+                    Por favor poner una fecha.
                   </div>
                 </div>
+
+                <div class="col-md-5">
+                  <label for="country" class="form-label">Categoria</label>
+                  <select class="form-select" id="country" required>
+                    <option value="">Categorias...</option>
+                    <option>Mantenimiento.</option>
+                    <option>Reparacion.</option>
+                    <option>Otros.</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Por favor escoger una Categoria.
+                  </div>
+                </div>
+    
 
               <hr class="my-4" />
 
@@ -197,11 +211,14 @@
       </main>
 
       <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">&copy; 2017–2021 Company Name</p>
+        <p class="mb-1">&copy; 2017–2021 </p>
         <ul class="list-inline">
           <li class="list-inline-item"><a href="#">Privacy</a></li>
           <li class="list-inline-item"><a href="#">Terms</a></li>
           <li class="list-inline-item"><a href="#">Support</a></li>
+          <li class="list-inline-item"><a href="../aprovar_form/apro_form.html">Aprobar formularios</a></li>
+          
+
         </ul>
       </footer>
     </div>

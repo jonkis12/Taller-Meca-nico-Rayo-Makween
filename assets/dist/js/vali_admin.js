@@ -49,3 +49,21 @@ $(function () {
     }
   });
 });
+
+$(function () {
+  $("#form3").submit(function (e) {
+    e.preventDefault();
+    var valido = true;
+    if (!valida_form("#country", a)) {
+      valido = false;
+    }
+    if (!valida_form("#username", a)) {
+      valido = false;
+    }
+    if (!valido) {
+      e.preventDefault();
+    } else {
+      alert("Comentario subido");
+    }
+  });
+});
