@@ -67,3 +67,32 @@ $(function () {
     }
   });
 });
+
+$(function () {
+  $("#form4").submit(function (e) {
+    e.preventDefault();
+    var valido = true;
+    if (!valida_form("#firstName", a)) {
+      valido = false;
+    }
+    if (!valida_form("#lastName", a)) {
+      valido = false;
+    }
+    if (!valida_form("#mail", a)) {
+      valido = false;
+    }
+    if (!valida_form("#msg", a)) {
+      valido = false;
+    }
+    if (!valido) {
+      e.preventDefault();
+    } else {
+      alert("Comentario subido");
+    }
+    if (e.preventDefault("#mantenimiento", a).checked == true) {
+      valido = false;
+    } else {
+      alert("Comentario subido");
+    }
+  });
+});

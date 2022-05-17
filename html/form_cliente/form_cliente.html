@@ -69,73 +69,86 @@
           <h4>Contacto</h4>
         </div>
         <div class="mb-2">
-          <form action="">
+          <form action="needs-validation" id="form4">
             <div class="mb-2">
-              <label for="nombre">Nombre</label>
+              <label for="nombre" class="form-label">Nombre</label>
               <input
                 type="text"
                 class="form-control"
+                id="firstName"
                 name="nombre"
                 placeholder="Ej: Alejandro"
+                required
               />
+              <div class="invalid-feedback">
+                Nombre necesario.
+              </div>
             </div>
             <div class="mb-2">
-              <label for="apellido">Apellido</label>
+              <label for="apellido" class="form-label">Apellido</label>
               <input
                 type="text"
                 class="form-control"
+                id="lastName"
                 name="apellido"
                 placeholder="Ej: Perez"
+                required
               />
+              <div class="invalid-feedback">
+                Apellido necesario.
+              </div>
             </div>
             <div class="mb-2">
-              <label for="correo">Correo</label>
+              <label for="correo" class="form-label">Correo</label>
               <input
                 type="text"
                 class="form-control"
+                id="mail"
                 name="correo"
                 placeholder="Ej: alepe@duocuc.cl"
+                required
               />
+              <div class="invalid-feedback">
+                Apellido necesario.
+              </div>
             </div>
             <div class="mb-2">
-              <label for="tipo de consulta">Tipo de consulta </label>
-              <input
-                type="radio"
-                name="tipo de consulta"
-                id="mantenimiento"
-                value="masculino"
-              />
-              mantenimiento
-              <input
-                type="radio"
-                name="tipo de consulta"
-                id="reparacion"
-                value="femenino"
-              />
-              reparacion
-              <input
-                type="radio"
-                name="tipo de consulta"
-                id="otro"
-                value="otro"
-              />
-              Otro
+              <label for="country" class="form-label">Categoria</label>
+              <select class="form-select" id="country" required>
+                <option value="">Categorias...</option>
+                <option>Mantenimiento.</option>
+                <option>Reparacion.</option>
+                <option>Otros.</option>
+              </select>
+              <div class="invalid-feedback">
+                Por favor escoger una Categoria.
+              </div>
             </div>
             <div class="mb-2">
-              <label for="mensaje">Mensaje</label>
+              <label for="mensaje" class="form-label">Mensaje</label>
               <textarea
                 name="mensaje"
-                id="mensaje"
+                id="msg"
                 class="form-control"
                 placeholder="ej: hola, necesito tu ayuda con mi auto..."
+                required
               ></textarea>
             </div>
             <div class="mb-2">
-              <button class="btn btn-primary">Enviar</button>
+              <button class="btn btn-primary" type="submit">Enviar</button>
+              <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
             </div>
           </form>
         </div>
       </div>
     </section>
   </body>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"
+></script>
+<script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/dist/js/vali_admin.js"></script>
+  <script src="../../assets/dist/js/form-validation.js"></script>
 </html>

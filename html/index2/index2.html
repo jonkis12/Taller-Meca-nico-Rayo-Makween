@@ -106,7 +106,7 @@
         
           <div >
             <h4 class="mb-3">Datos Mecanico</h4>
-            <form class="needs-validation" id="form2" novalidate>
+            <form class="needs-validation" id="form2">
               <div class="row g-3">
                 <div class="col-sm-6">
                   <label for="firstName" class="form-label">Nombres</label>
@@ -163,6 +163,7 @@
                     class="form-control"
                     id="username"
                     placeholder="Descripcion imagen (opcional) ..."
+                    required
                   />
                   <div class="invalid-feedback">
                     Por favor poner una imagen.
@@ -201,10 +202,15 @@
 
               <hr class="my-4" />
 
+                <div>
 
-              <button class="w-100 btn btn-primary btn-lg" type="submit">
+                
+              <button class="btn btn-primary" type="submit">
                 Subir
               </button>
+
+              <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
+            </div>
             </form>
           </div>
         </div>
