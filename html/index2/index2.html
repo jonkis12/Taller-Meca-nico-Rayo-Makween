@@ -15,6 +15,7 @@
       rel="canonical"
       href="https://getbootstrap.com/docs/5.1/examples/checkout/"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <!-- Bootstrap core CSS -->
     <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -154,14 +155,14 @@
                 </div>
 
                 <div class="col-12">
-                  <label for="username" class="form-label"
+                  <label for="img" class="form-label"
                     >Imagenes
                     <span class="text-muted">(Una imagen minimo)</span> <button type="submit" class="btn btn-secondary">Examinar equipo</button></label
                   >
                   <input
                     type="text"
                     class="form-control"
-                    id="username"
+                    id="img"
                     placeholder="Descripcion imagen (opcional) ..."
                     required
                   />
@@ -205,7 +206,7 @@
                 <div>
 
                 
-              <button class="btn btn-primary" type="submit">
+              <button class="btn btn-primary" type="submit" id="adicionar">
                 Subir
               </button>
 
@@ -213,7 +214,21 @@
             </div>
             </form>
           </div>
+          <table  id="mytable" class="table table-bordered table-hover ">
+            <tr>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th>Descripcion</th>
+              <th>Imagenes</th>
+              <th>Eliminar</th>
+              <th>Fecha trabajo</th>
+              <th>Categoria</th>
+          
+            </tr>
+          </table>
+
         </div>
+
       </main>
 
       <footer class="my-5 pt-5 text-muted text-center text-small">
@@ -239,6 +254,7 @@
   <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../assets/dist/js/vali_admin.js"></script>
     <script src="../../assets/dist/js/form-validation.js"></script>
+    <script src="../../assets/dist/js/tabla.js"></script>
     
     
 
