@@ -107,7 +107,7 @@
         
           <div >
             <h4 class="mb-3">Datos Mecanico</h4>
-            <form class="needs-validation" id="form2">
+            <form class="needs-validation" id="form2" autocomplete="on">
               <div class="row g-3">
                 <div class="col-sm-6">
                   <label for="firstName" class="form-label">Nombres</label>
@@ -117,8 +117,12 @@
                     id="firstName"
                     placeholder=""
                     value=""
+                    list="datalistOptions"
                     required
                   />
+                  <datalist id="datalistOptions">
+                    <option value="Tokino">
+                  </datalist>
                   <div class="invalid-feedback">
                     Nombre necesario.
                   </div>
@@ -132,8 +136,12 @@
                     id="lastName"
                     placeholder=""
                     value=""
+                    list="datalistOptions1"
                     required
                   />
+                  <datalist id="datalistOptions1">
+                    <option value="Sora">
+                  </datalist>
                   <div class="invalid-feedback">
                     Apellido necesario.
                   </div>
@@ -206,11 +214,12 @@
                 <div>
 
                 
-              <button class="btn btn-primary" type="submit" id="adicionar">
+              <button class="btn btn-primary" type="submit">
                 Subir
               </button>
 
               <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
+              <button id="adicionar" class="btn btn-success" type="button">Agregar a la tabla</button>
             </div>
             </form>
           </div>

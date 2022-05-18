@@ -53,27 +53,27 @@
 <body class="text-center">
   <main class="form-signin">
     <div class="signup-form">
-        <form action="/examples/actions/confirmation.php" method="post">
+        <form action="/examples/actions/confirmation.php" method="post" id="form6">
             <h2>Register</h2>
             <p class="hint-text">Crea tu cuenta.</p>
             <div class="form-group">
                 <div class="row">
                     <div class="col">
-                        <input type="text" class="form-control" name="nombre" placeholder="Nombre" required="required">
+                        <input type="text" class="form-control" name="nombre" placeholder="Nombre" required="required" id="nombre">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" name="apellido" placeholder="Apellido" required="required">
+                        <input type="text" class="form-control" name="apellido" placeholder="Apellido" required="required" id="apellido">
                     </div>
                 </div>
             </div>
             <div class="form-group">
-                <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+                <input type="email" class="form-control" name="email" placeholder="Email" required="required" id="email">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" name="contraseña" placeholder="Contraseña" required="required">
+                <input type="password" class="form-control" name="contraseña" placeholder="Contraseña" required="required" id="contra">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" name="confirmar_contraseña" placeholder="Confirmar contraseña " required="required">
+                <input type="password" class="form-control" name="confirmar_contraseña" placeholder="Confirmar contraseña " required="required" id="contra2">
             </div>
             <div class="form-group">
                 <label class="form-check-label">
@@ -91,4 +91,5 @@
             <a href="../login/login.html"> Ya tienes una cuenta? Iniciar sesión</a>
         </div>
     </div>
+    <script src="../../assets/dist/js/vali_admin.js"></script>
 </body>

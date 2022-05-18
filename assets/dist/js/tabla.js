@@ -9,6 +9,7 @@ $(document).ready(function () {
     var fecha = document.getElementById("address").value;
     var categoria = document.getElementById("country").value;
     var i = 1; //contador para asignar id al boton que borrara la fila
+    var a = "";
     var fila =
       '<tr id="row' +
       i +
@@ -54,6 +55,7 @@ $(document).ready(function () {
   });
 });
 
+//no funciona xd
 $(function () {
   $("#mytable").submit(function (e) {
     e.preventDefault();
