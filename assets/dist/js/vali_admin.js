@@ -96,3 +96,30 @@ $(function () {
     }
   });
 });
+
+$(function () {
+  $("#form6").submit(function (e) {
+    e.preventDefault();
+    var valido = true;
+    if (!valida_form("#nombre", a)) {
+      valido = false;
+    }
+    if (!valida_form("#apellido", a)) {
+      valido = false;
+    }
+    if (!valida_form("#email", a)) {
+      valido = false;
+    }
+    if (!valida_form("#contra", a)) {
+      valido = false;
+    }
+    if (!valida_form("#contra2", a)) {
+      valido = false;
+    }
+    if (!valido) {
+      e.preventDefault();
+    } else {
+      alert("Se a registrado correctamente");
+    }
+  });
+});
