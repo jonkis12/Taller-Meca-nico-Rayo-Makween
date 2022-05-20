@@ -123,3 +123,21 @@ $(function () {
     }
   });
 });
+
+$(function () {
+  $("#form7").submit(function (e) {
+    e.preventDefault();
+    var valido = true;
+    if (!valida_form("#user", a)) {
+      valido = false;
+    }
+    if (!valida_form("#contra9", a)) {
+      valido = false;
+    }
+    if (!valido) {
+      e.preventDefault();
+    } else {
+      alert("Login Correcto");
+    }
+  });
+});

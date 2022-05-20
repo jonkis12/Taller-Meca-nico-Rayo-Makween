@@ -122,7 +122,7 @@
   <br />
   <br />
   <body>
-    <form action="/action_page.php" method="post" autocomplete="on">
+    <form action="/action_page.php" method="post" autocomplete="on" id="form7">
       <div class="py-5 text-center">
         <img
           src="../../imagenes/login/img12.jpg"
@@ -138,17 +138,24 @@
 
       <div class="container">
         <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required />
+        <input
+          type="text"
+          placeholder="Enter Username"
+          name="uname"
+          id="user"
+          required
+        />
 
         <label for="psw"><b>Password</b></label>
         <input
           type="password"
           placeholder="Enter Password"
           name="psw"
+          id="contra9"
           required
         />
 
-        <button type="button">Login</button>
+        <button type="submit">Login</button>
         <label>
           <input type="checkbox" checked="checked" name="remember" /> Remember
           me
@@ -170,4 +177,11 @@
       </p>
     </footer>
   </body>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script src="../../assets/dist/js/vali_admin.js"></script>
+  <script src="../../assets/dist/js/form-validation.js"></script>
 </html>
