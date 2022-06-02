@@ -1,0 +1,18 @@
+#map{
+    height: 75vh;
+    width: 75hw;
+}
+h1{
+    color: black;
+    font-family: verdana;
+    text-align: center;
+}
+select{
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+p{
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
