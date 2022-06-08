@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.88.1" />
+    <title>Checkout example · Bootstrap v5.1</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.1/examples/checkout/"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    {% load static %}
+
+    <link href="{% static 'core/css/bootstrap.min.css' %}" rel="stylesheet" /> 
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'core/css/form-validation.css' %}" rel="stylesheet" />
+  </head>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}">El Rayo</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="{% url 'home' %}"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <body class="bg-light">
+    <div class="container">
+      <main>
+        <div class="py-5 text-center">
+          <img
+            src="{% static 'core/img/ind_img3.jpeg' %}"
+            alt=""
+            class="rounded-circle"
+            width="140"
+            height="140"
+            role="img"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          />
+          <h2>Formulario Mecanico</h2>
+          <p class="lead">Agregar datos de los trabajos realizados.</p>
+        </div>
+
+        
+          <div >
+            <h4 class="mb-3">Datos Mecanico</h4>
+            <form class="needs-validation" id="form2" autocomplete="on">
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="firstName" class="form-label">Nombres</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    placeholder=""
+                    value=""
+                    list="datalistOptions"
+                    required
+                  />
+                  <datalist id="datalistOptions">
+                    <option value="Tokino">
+                  </datalist>
+                  <div class="invalid-feedback">
+                    Nombre necesario.
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="lastName" class="form-label">Apellidos</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    placeholder=""
+                    value=""
+                    list="datalistOptions1"
+                    required
+                  />
+                  <datalist id="datalistOptions1">
+                    <option value="Sora">
+                  </datalist>
+                  <div class="invalid-feedback">
+                    Apellido necesario.
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="username" class="form-label"
+                    >Descripcion trabajo realizado.</label
+                  >
+                  <div class="input-group has-validation">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="username"
+                      placeholder="Descripcion..."
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="img" class="form-label"
+                    >Imagenes
+                    <span class="text-muted">(Una imagen minimo)</span> <button type="submit" class="btn btn-secondary">Examinar equipo</button></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="img"
+                    placeholder="Descripcion imagen (opcional) ..."
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Por favor poner una imagen.
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="address" class="form-label"
+                    >Fecha trabajo entregado.</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="address"
+                    placeholder="DD/MM/YY"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Por favor poner una fecha.
+                  </div>
+                </div>
+
+                <div class="col-md-5">
+                  <label for="country" class="form-label">Categoria</label>
+                  <select class="form-select" id="country" required>
+                    <option value="">Categorias...</option>
+                    <option>Mantenimiento.</option>
+                    <option>Reparacion.</option>
+                    <option>Otros.</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Por favor escoger una Categoria.
+                  </div>
+                </div>
+    
+
+              <hr class="my-4" />
+
+                <div>
+
+                
+              <button class="btn btn-primary" type="submit">
+                Subir
+              </button>
+
+              <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
+              <button id="adicionar" class="btn btn-success" type="button">Agregar a la tabla</button>
+            </div>
+            </form>
+          </div>
+          <table  id="mytable" class="table table-bordered table-hover ">
+            <tr>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th>Descripcion</th>
+              <th>Imagenes</th>
+              <th>Eliminar</th>
+              <th>Fecha trabajo</th>
+              <th>Categoria</th>
+          
+            </tr>
+          </table>
+
+        </div>
+
+      </main>
+
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2017–2021 </p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Privacy</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Support</a></li>
+          <li class="list-inline-item"><a href="{% url 'apro_form' %}">Aprobar formularios</a></li>
+          
+
+        </ul>
+      </footer>
+    </div>
+
+    
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script src="{% static 'core/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'core/js/vali_admin.js' %}"></script>
+    <script src="{% static 'core/js/form-validation.js' %}"></script>
+    <script src="{% static 'core/js/tabla.js' %}"></script>
+    
+    
+
+    
+</html>
