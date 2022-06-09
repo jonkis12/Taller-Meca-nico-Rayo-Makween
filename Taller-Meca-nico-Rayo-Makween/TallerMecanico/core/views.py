@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 
-from core.forms import ContactoForm
-from .models import Contacto
+from core.forms import ContactoForm, TrabajoForm
+from .models import Contacto, Trabajo
 
 # Create your views here.
 
@@ -44,9 +44,13 @@ def index2(request):
 
 def apro_form(request):
     contactos = Contacto.objects.all()
+    trabajo = Trabajo.objects.all()
     datos ={
-        'contactos': contactos
+        'contactos': contactos,
+        'trabajos': trabajo
     }
+    
+
     return render(request, 'core/apro_form.html', datos)
 
 def forms(request):
@@ -79,3 +83,38 @@ def form_del(request, id):
     contacto = Contacto.objects.get(rut=id)
     contacto.delete()
     return redirect(to="home")
+
+def form_del2(request, id):
+    trabajo = Trabajo.objects.get(id=id)
+    trabajo.delete()
+    return redirect(to="apro_form")
+
+
+def apro_trabajo(request):
+    datos = {
+        'form': TrabajoForm()
+    }
+    if request.method=='POST':
+        formulario=TrabajoForm(request.POST, files=request.FILES)
+        if formulario.is_valid():
+            formulario.save()
+            datos['mensaje']='Datos guardados correctamente'
+    
+    return render(request, 'core/apro_trabajo.html', datos)
+
+
+def trabajo_mod(request, id):
+    trabajo = Trabajo.objects.get(id=id)
+    datos = {
+        
+        'form': TrabajoForm(instance=trabajo)
+    }
+    
+    if request.method=='POST':
+        formulario=TrabajoForm(data=request.POST, instance=Trabajo.objects.get(id=id))
+        if formulario.is_valid():
+            formulario.save()
+            datos['mensaje']='Datos modificados correctamente'
+    
+    return render(request, 'core/trabajo_mod.html', datos)
+
