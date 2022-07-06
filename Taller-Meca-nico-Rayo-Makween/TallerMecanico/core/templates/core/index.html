@@ -76,9 +76,18 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Login</a>
+<li class="nav-item">
+                <a class="nav-link active" href="{% url 'login' %}">Login</a>
               </li>
+              {% if user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link active"href="{% url 'logout' %}">cerrar sesion</a>
+              </li>
+              {% else %}
+              <li>
+                 <a href="% url 'login' %"></a>
+                </li>
+                  {% endif %}
               <li class="nav-item">
                 <a class="nav-link active" href="{% url 'form_cliente' %}">Contactanos</a>
               </li>
@@ -222,12 +231,12 @@
             <img src="{% static 'core/img/ind_img10.jpg' %}" alt="" class="rounded-circle" width="140" height="140" role="img"
               preserveAspectRatio="xMidYMid slice"
               focusable="false">
-            <h2>Categorias.</h2>
+            <h2>Trabajos</h2>
             <p>
-              Estos son nuestros servicios.
+              Estos son nuestros trabajos realizados.
             </p>
             <p>
-              <a class="btn btn-secondary" href="#">View details &raquo;</a>
+              <a class="btn btn-secondary" href="{% url 'trabajos' %}">View details &raquo;</a>
             </p>
           </div>
           <!-- /.col-lg-4 -->

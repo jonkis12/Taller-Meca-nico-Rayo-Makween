@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import form_del2, home, form_cliente, perfil_usuario, login_admin, index2, apro_form, forms, form_mod, form_del, apro_trabajo, trabajo_mod
+from .views import form_del2, home, form_cliente, perfil_usuario, login_admin, index2, apro_form, forms, form_mod, form_del, apro_trabajo, trabajo_mod, trabajos
 
 urlpatterns = [
     path('',home,name="home"),
@@ -14,4 +14,5 @@ urlpatterns = [
     path('form_del2/<id>', form_del2, name="form_del2"),
     path('apro_trabajo', apro_trabajo, name="apro_trabajo"),
     path('trabajo_mod/<id>', trabajo_mod, name="trabajo_mod"),
+    path('trabajos', trabajos, name="trabajos"),
 ]

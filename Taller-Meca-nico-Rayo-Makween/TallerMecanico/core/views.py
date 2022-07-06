@@ -118,3 +118,12 @@ def trabajo_mod(request, id):
     
     return render(request, 'core/trabajo_mod.html', datos)
 
+def trabajos(request):
+    
+    trabajo = Trabajo.objects.all()
+    datos ={
+        'trabajos': trabajo
+    }
+    
+    
+    return render(request, 'core/trabajos.html', datos)

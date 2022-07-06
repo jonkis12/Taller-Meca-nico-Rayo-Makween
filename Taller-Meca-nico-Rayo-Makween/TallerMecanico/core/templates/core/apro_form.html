@@ -123,7 +123,7 @@
           </div>
 
 
-          <div class="col-md-12">
+          <div class="container-fluid">
             <h5>Formularios trabajos</h5>
 
             <div class="table-responsive">
@@ -143,7 +143,9 @@
                     <th scope="col">{{t.mecanico}}</th>
                     <th scope="col">{{t.fecha}}</th>
                     <th scope="col">{{t.materiales}}</th>
-                    <th scope="col">{{t.img}}</th>
+                    {% if t.img %}
+                    <th scope="col"><img src="{{ t.img.url }}" alt="" width="10%" height="10%" ></th>
+                    {% endif %}
                     <th scope="col"><a href="{% url 'form_del2' t.id %}">Eliminar</a></th>
                     <th scope="col"><a href="{% url 'trabajo_mod' t.id %}">Modificar</a></th>
                     

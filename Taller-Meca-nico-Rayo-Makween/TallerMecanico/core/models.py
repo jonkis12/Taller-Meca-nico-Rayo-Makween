@@ -25,9 +25,11 @@ class Trabajo(models.Model):
   mecanico =models.CharField(max_length= 50, verbose_name='Mecanico')
   fecha = models.DateField(max_length=9, verbose_name='Fecha')
   materiales = models.CharField(max_length=200, verbose_name='Materiales')
-  img = models.ImageField()
+  img = models.ImageField(null = True, blank = True)
   categoria = models.ForeignKey(Categorias, on_delete = models.CASCADE)
   
 
   def __str__(self):
     return self.mecanico
+  
+
