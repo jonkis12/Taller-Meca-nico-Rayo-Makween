@@ -43,8 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'crispy_forms',
-    'rest_auto',
-    'rest_framework',
+    
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -87,7 +86,7 @@ WSGI_APPLICATION = 'TallerMecanico.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': '127.0.0.1:1521/xepdb1',
+        'NAME': '127.0.0.1:1521/xe',
         'USER': 'prueba2',
         'PASSWORD': 'duoc',
         'TEST': {
