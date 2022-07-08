@@ -79,18 +79,28 @@
 <li class="nav-item">
                 <a class="nav-link active" href="{% url 'login' %}">Login</a>
               </li>
+             
+              
+           
+             
+               <li>
+                 <a href="% url 'login' %"></a>
+                </li>
+                
+                 
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'form_cliente' %}">Contactanos</a>
+              </li>
               {% if user.is_authenticated %}
               <li class="nav-item">
                 <a class="nav-link active"href="{% url 'logout' %}">cerrar sesion</a>
               </li>
-              {% else %}
               <li>
-                 <a href="% url 'login' %"></a>
-                </li>
-                  {% endif %}
-              <li class="nav-item">
-                <a class="nav-link active" href="{% url 'form_cliente' %}">Contactanos</a>
+                 <a class="nav-link active" href ="#">@{{ user.username}}</a>
               </li>
+              {% else %}
+           
+              {% endif %}
             </ul>
             <form class="d-flex">
               <label for="exampleDataList" class="form-label"></label>
